@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алгоритм Сортировки Пузырьком</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+    <a href ="#" class="DropDown"> Алгоримы сортировки</a>
+
+    
+    <nav>
+            <ul>
+
+                <li><a href = "#">Сортировка &blacktriangledown;</a>
+                    <ul>
+                        <li><a href="#steps">пузырьком</a></li>
+                        <li><a href="#steps2">выбором</a></li>
+                        <li><a href="#steps3">вставками</a></li>
+                    </ul>
+                </li>
+                <li><a href = "#">Поиск &blacktriangledown;</a>
+                    <ul>
+                        <li><a href="#">бинарный</a></li>
+                        <li><a href="#">не бинанрный</a></li>
+                        <li><a href="#">еще какой-то</a></li>
+                    </ul>
+                </li>
+                <li><a href = "#">Алгоритмы ... &blacktriangledown;</a>
+                    <ul>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+  
+    </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Описание</h2>
+            <p>Алгоритм последовательно сравнивает соседние элементы списка и меняет их местами, если они находятся в неправильном порядке. Процесс повторяется до тех пор, пока список не станет отсортированным.</p>
+        </section>
+        <section>
+            <h2>Принцип работы</h2>
+            <ol id="steps">
+                <li>Сравниваются первые два элемента. Если они в неправильном порядке, меняются местами.</li>
+                <li>Процесс продолжается для всех пар соседних элементов до конца списка.</li>
+                <li>Самый большой элемент «всплывает» в конец списка.</li>
+                <li>Каждый последующий проход сокращает длину неотсортированной части на один элемент (последний элемент уже отсортирован).</li>
+                <li>Процесс завершается, когда за проход не произошло ни одной замены.</li>
+            </ol>
+
+
+        </head>
+        <body>
+            <button id="load-image-btn">показать блок-схему</button>
+            <div id="image-container"></div>
+
+            
+            
+            <div id="codeDisplay" style="margin-top: 20px;"></div>
+        </section>
+        <section>
+            <h2>Пример кода на Python</h2>
+            <pre><code>
+
+        def bubble_sort(nums):
+    n = len(nums)
+    for i in range(n):
+        swapped = False
+        for j in range(n - i - 1):
+            if nums[j] > nums[j + 1]:
+                nums[j], nums[j + 1] = nums[j + 1], nums[j]
+                swapped = True
+        if not swapped:
+            break
+    return nums
+                    
+            </code></pre>
+
+
+        <section>
+            <h2>Описание</h2>
+            <p>Сортировка выбором — это простой алгоритм, который работает путем последовательного выбора наименьшего элемента из неотсортированной части списка и перемещения его в начало отсортированной части.</p>
+        </section>
+        <section>
+            <h2>Принцип работы</h2>
+            <ol id="steps2">
+                <li>Поиск минимума в неотсортированной части списка (начиная с первого элемента).</li>
+                <li>Обмен найденного минимума с первым элементом текущей неотсортированной части.</li>
+                <li>Уменьшение неотсортированной части на один элемент.</li>
+                <li>Повтор процесса до полной сортировки</li>
+            </ol>
+
+
+        </head>
+        <body>
+            <button id="load-image-btn2">показать блок-схему</button>
+            <div id="image-container2"></div>
+
+            
+            
+            <div id="codeDisplay2" style="margin-top: 20px;"></div>
+        </section>
+        <section>
+            <h2>Пример кода на Python</h2>
+            <pre><code>
+
+                def selection_sort(nums):
+                for i in range(len(nums)):
+                         
+                    lowest_value_index = i
+                    
+                    for j in range(i + 1, len(nums)):
+                        if nums[j] < nums[lowest_value_index]:
+                            lowest_value_index = j
+                                       
+                    nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
+            
+            random_list_of_nums = [12, 8, 3, 20, 11]
+            selection_sort(random_list_of_nums)
+            print(random_list_of_nums)
+                    
+            </code></pre>
+        
+        
+        </section>
+
+
+        <section>
+            <h2>Описание</h2>
+            <p>Сортировка вставками работает путем последовательной вставки каждого элемента в правильное место в отсортированной части списка.</p>
+
+        </section>
+        <section>
+            <h2>Принцип работы</h2>
+            <ol id="steps3">
+                <li>Выбор элемента из неотсортированной части (начиная со второго элемента).</li>
+                <li>Сдвиг элементов в отсортированной части, пока не найдётся место для вставки выбранного элемента.</li>
+                <li>Вставка элемента на правильную позицию.</li>
+                <li>Повтор для оставшихся элементов</li>
+            </ol>
+
+
+        </head>
+        <body>
+            <button id="load-image-btn3">показать блок-схему</button>
+            <div id="image-container3"></div>
+
+            
+            
+            <div id="codeDisplay3" style="margin-top: 20px;"></div>
+        </section>
+        <section>
+            <h2>Пример кода на Python</h2>
+            <pre><code>
+
+            def insertion_sort(arr):
+        for i in range(1, len(arr)):
+            key = arr[i]
+            j = i - 1
+            while j >= 0 and key < arr[j]:
+                arr[j + 1] = arr[j]
+                j -= 1
+            arr[j + 1] = key
+
+    # Пример использования
+    array = [10, 7, 8, 9, 1, 5]
+    insertion_sort(array)
+    print("Отсортированный массив:", array)
+                    
+            </code></pre>
+        
+        
+        </section>
+
+    </main>
+    <input type="number" id="num1" placeholder="Введите число 1">
+
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+
+    </select>
+    <input type="number" id="num2" placeholder="Введите число 2">
+    <button onclick="calculate()">Посчитать</button> 
+    <p id="result"></p>
+
+
+    <footer>
+        <p>&copy; 2023 Алгоритмы. Все права защищены.</p>
+    </footer>
+
+
+</body>
+<script 
+        src="script.js">
+        
+    </script>
+</html>
