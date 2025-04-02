@@ -65,6 +65,7 @@ nav ul li ul {
     width: 200px;
     background:#35424a;
     display: none;
+    z-index: 1;
 }
 nav ul li ul li{
     width: 100%;
