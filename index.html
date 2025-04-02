@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Алгоритмы Сортировки</title>
+    <title>Алгоритм Сортировки Пузырьком</title>
     <link rel="stylesheet" href="styles.css">
     
 </head>
 <body>
     <header>
-    <a href ="#" class="DropDown"> Алгоримы сортировки 1</a>
+    <a href ="#" class="DropDown"> Алгоримы сортировки</a>
 
     
     <nav>
             <ul>
 
-                <li><a href = "#">Сортировка &blacktriangledown;</a>
+                <li id="sostep1"><a href = "#">Сортировка &blacktriangledown;</a>
                     <ul>
                         <li><a href="#steps">пузырьком</a></li>
                         <li><a href="#steps2">выбором</a></li>
                         <li><a href="#steps3">вставками</a></li>
                     </ul>
                 </li>
-                <li><a href = "#">Поиск &blacktriangledown;</a>
+                <li id="sostep2"><a href = "#">Поиск &blacktriangledown;</a>
                     <ul>
                         <li><a href="#">бинарный</a></li>
                         <li><a href="#">не бинанрный</a></li>
                         <li><a href="#">еще какой-то</a></li>
                     </ul>
                 </li>
-                <li><a href = "#">Алгоритмы ... &blacktriangledown;</a>
+                <li id="sostep3"><a href = "#">Алгоритмы ... &blacktriangledown;</a>
                     <ul>
                         <li><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
@@ -48,7 +48,6 @@
         </section>
         <section>
             <h2>Принцип работы</h2>
- 
             <ol id="steps">
                 <li>Сравниваются первые два элемента. Если они в неправильном порядке, меняются местами.</li>
                 <li>Процесс продолжается для всех пар соседних элементов до конца списка.</li>
@@ -71,17 +70,17 @@
             <h2>Пример кода на Python</h2>
             <pre><code>
 
-        def bubble_sort(nums):
-    n = len(nums)
-    for i in range(n):
-        swapped = False
-        for j in range(n - i - 1):
-            if nums[j] > nums[j + 1]:
-                nums[j], nums[j + 1] = nums[j + 1], nums[j]
-                swapped = True
-        if not swapped:
-            break
-    return nums
+    def bubble_sort(nums):
+        n = len(nums)
+        for i in range(n):
+            swapped = False
+            for j in range(n - i - 1):
+                if nums[j] > nums[j + 1]:
+                    nums[j], nums[j + 1] = nums[j + 1], nums[j]
+                    swapped = True
+            if not swapped:
+                break
+        return nums
                     
             </code></pre>
 
@@ -113,20 +112,20 @@
             <h2>Пример кода на Python</h2>
             <pre><code>
 
-                def selection_sort(nums):
-                for i in range(len(nums)):
+    def selection_sort(nums):
+        for i in range(len(nums)):
                          
-                    lowest_value_index = i
+            lowest_value_index = i
                     
-                    for j in range(i + 1, len(nums)):
-                        if nums[j] < nums[lowest_value_index]:
-                            lowest_value_index = j
+            for j in range(i + 1, len(nums)):
+                if nums[j] < nums[lowest_value_index]:
+                    lowest_value_index = j
                                        
-                    nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
+            nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
             
-            random_list_of_nums = [12, 8, 3, 20, 11]
-            selection_sort(random_list_of_nums)
-            print(random_list_of_nums)
+    random_list_of_nums = [12, 8, 3, 20, 11]
+    selection_sort(random_list_of_nums)
+    print(random_list_of_nums)
                     
             </code></pre>
         
@@ -162,7 +161,7 @@
             <h2>Пример кода на Python</h2>
             <pre><code>
 
-            def insertion_sort(arr):
+    def insertion_sort(arr):
         for i in range(1, len(arr)):
             key = arr[i]
             j = i - 1
