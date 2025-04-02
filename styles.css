@@ -29,7 +29,7 @@ header .DropDown{
     font-size: 30px;
     font-weight: 900;
     color: #ffffff;
-    transition: 0.5;
+    transition: 10;
     text-decoration: none;
 }
 
@@ -54,7 +54,7 @@ header nav ul li a {
     text-decoration: none;
 }
 header nav ul li a:hover{
-    background: #2774c1;
+    background: #6e7276;
     color:#ffffff;
 
 }
@@ -70,6 +70,7 @@ nav ul li ul {
 nav ul li ul li{
     width: 100%;
     border: 1px solid rgba(0,0,0,.1);
+    
     
 
 }
@@ -152,5 +153,6 @@ button {
 }
 
 button:hover {
-    background-color: #4e6e8f
+    background-color: #5b5d5e
+
 }
