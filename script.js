@@ -1,11 +1,11 @@
 
 // JSON data containing image URLs
         const imageData = [
-            { "url": "/KarinaPepper/INDIprojetc/bird1.jpeg"},
-            { "url": "/KarinaPepper/INDIprojetc/bird2.jpeg"},
-            { "url": "/KarinaPepper/INDIprojetc/bird3.jpeg"},
-            { "url": "/KarinaPepper/INDIprojetc/bird4.jpeg"},
-            { "url": "/KarinaPepper/INDIprojetc/bird5.jpeg"}
+            { "url": "/bird1.jpeg"},
+            { "url": "/bird2.jpeg"},
+            { "url": "/bird3.jpeg"},
+            { "url": "/bird4.jpeg"},
+            { "url": "/bird5.jpeg"}
 
 
         ];
