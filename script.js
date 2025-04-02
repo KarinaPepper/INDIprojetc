@@ -12,7 +12,7 @@
 
         let currentIndex = 0; // Tracks the current image index
 
-        let imagebut = "load-image-btn";
+        let imagebut = "load-image-btn"; // load-immage button
 
         document.getElementById(imagebut).addEventListener("click", () => {
             const container = document.getElementById("image-container");
