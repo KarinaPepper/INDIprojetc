@@ -17,7 +17,7 @@
             { "url": "/INDIprojetc/original4lastpng.png"}
           ],
           "load-image-btn5": [
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"}
+            { "url": "/bird3.jpeg"}
           ],
           "load-image-btn6": [
             { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
