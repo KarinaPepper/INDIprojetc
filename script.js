@@ -1,33 +1,128 @@
 
 // JSON data containing image URLs
-        const imageData = [
-            { "url": "/INDIprojetc/bird1.jpeg"},
-            { "url": "/INDIprojetc/bird2.jpeg"},
-            { "url": "/INDIprojetc/bird3.jpeg"},
-            { "url": "/INDIprojetc/bird4.jpeg"},
-            { "url": "/INDIprojetc/bird5.jpeg"}
+
+        const imageData = {
+          "load-image-btn4": [
+            { "url": "/Users/ilia_dumov/Desktop/damn/original4.png"},
+            { "url": "/Users/ilia_dumov/Desktop/damn/image search41.png"},
+            { "url": "/Users/ilia_dumov/Desktop/damn/image search42.png"},
+            { "url": '/Users/ilia_dumov/Desktop/damn/image search43.png'},
+            { "url": '/Users/ilia_dumov/Desktop/damn/image search44.png'},
+            { "url": '/Users/ilia_dumov/Desktop/damn/image search45.png'},
+            { "url": '/Users/ilia_dumov/Desktop/damn/image search43.png'},
+            { "url": '/Users/ilia_dumov/Desktop/damn/image search44.png'},
+            { "url": '/Users/ilia_dumov/Desktop/damn/image search45.png'},
+            { "url": '/Users/ilia_dumov/Desktop/damn/image search43.png'},
+            { "url": '/Users/ilia_dumov/Desktop/damn/image search44.png'},
+            { "url": "/Users/ilia_dumov/Desktop/damn/original4lastpng.png"}
+          ],
+          "load-image-btn5": [
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"}
+          ],
+          "load-image-btn6": [
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird4.jpeg"},
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird5.jpeg"}
+          ],
+          "load-image-btn": [
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird4.jpeg"},
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird5.jpeg"}
+          ],
+          "load-image-btn2": [
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird4.jpeg"},
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird5.jpeg"}
+          ],
+          "load-image-btn3": [
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird4.jpeg"},
+            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird5.jpeg"}
+          ]
+
+        };
 
 
-        ];
+        const stepAlgoData = {
+          "load-image-btn4": [
+            "0,1,2,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4",
+            "0,2,1,4"
+          ],
+        }
+      
+const buttons = document.querySelectorAll('.btn');
+let currentIndexs = {}; // Tracks the current image index
+      
+buttons.forEach(button => {
+button.addEventListener('click', () => {
+        const buttonName = button.getAttribute('data-name'); // Получаем значение data-name
+        const cool = button.getAttribute('data-div');
+        //const step = button.getAttribute('data-text');
 
-        let currentIndex = 0; // Tracks the current image index
+        let currentIndex = currentIndexs[buttonName];
+        if (currentIndex == undefined || currentIndex == null)
+          currentIndex = 0;
+    
 
-        let imagebut = "load-image-btn"; // load-immage button
+        //let currentIndex = 0; // Tracks the current image index
 
-        document.getElementById(imagebut).addEventListener("click", () => {
-            const container = document.getElementById("image-container");
+        //document.getElementById(buttonName) //.addEventListener("click", () => {
+        let images = imageData[buttonName]; 
+            
+            const container = document.getElementById(cool);
 
             // Clear previous image
             container.innerHTML = "";
 
             // Load the next image
             const img = document.createElement("img");
-            img.src = imageData[currentIndex].url;
+            img.src = images[currentIndex].url;
             container.appendChild(img);
 
+
+
+
+            //let stepAlgos = stepAlgoData[buttonName];
+
+            //const container2 = document.getElementById(step);
+
+            // Clear previous image
+            // if (currentIndex == 0)
+              // container2.innerHTML = "";
+
+            // Load the next image
+            //const textdata = document.createElement("p");
+            //textdata.innerHTML = `Step ${currentIndex}:` + stepAlgos[currentIndex];
+            //container2.appendChild(textdata);
+
+
+
             // Update index for next click
-            currentIndex = (currentIndex + 1) % imageData.length;
-        });
+            currentIndex = (currentIndex + 1) % images.length;
+            currentIndexs[buttonName] = currentIndex;
+    });
+  }); 
+
+
+function oldtext(){
+  const oldTextElement = document.getElementById('sostep2');
+  const oldTextElement2 = document.getElementById('sostep3');
+
+  oldTextElement.textContent = '';
+  oldTextElement2.textContent = '';
+
+}
 
 function calculate(){
     var op = (document.getElementById("operator").value); //выбранный оператор
@@ -58,3 +153,4 @@ function calculate(){
   
       document.getElementById("result").innerHTML = result;
     }
+
