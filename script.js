@@ -3,18 +3,18 @@
 
         const imageData = {
           "load-image-btn4": [
-            { "url": "INDIprojetc/original4.png"},
-            { "url": "INDIprojetc/image search41.png"},
-            { "url": "INDIprojetc/image search42.png"},
-            { "url": 'INDIprojetc/image search43.png'},
-            { "url": 'INDIprojetc/image search44.png'},
-            { "url": 'INDIprojetc/image search45.png'},
-            { "url": 'INDIprojetc/image search43.png'},
-            { "url": 'INDIprojetc/image search44.png'},
-            { "url": 'INDIprojetc/image search45.png'},
-            { "url": 'INDIprojetc/image search43.png'},
-            { "url": 'INDIprojetc/image search44.png'},
-            { "url": "INDIprojetc/original4lastpng.png"}
+            { "url": "/INDIprojetc/original4.png"},
+            { "url": "/INDIprojetc/image search41.png"},
+            { "url": "/INDIprojetc/image search42.png"},
+            { "url": '/INDIprojetc/image search43.png'},
+            { "url": '/INDIprojetc/image search44.png'},
+            { "url": '/INDIprojetc/image search45.png'},
+            { "url": '/INDIprojetc/image search43.png'},
+            { "url": '/INDIprojetc/image search44.png'},
+            { "url": '/INDIprojetc/image search45.png'},
+            { "url": '/INDIprojetc/image search43.png'},
+            { "url": '/INDIprojetc/image search44.png'},
+            { "url": "/INDIprojetc/original4lastpng.png"}
           ],
           "load-image-btn5": [
             { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"}
