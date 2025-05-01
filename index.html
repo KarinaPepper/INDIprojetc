@@ -3,45 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Алгоритм Сортировки Пузырьком</title>
+    <title>Алгоритмы </title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg" type="image/x-icon" sizes="any" class="roundgg">
+
+    
     
 </head>
 <body>
     <header>
-    <a href ="#" class="DropDown"> Алгоримы сортировки</a>
+    <a href ="#" class="Dropown"> Алгоримы и Блок-Схемы </a>
 
     
     <nav>
             <ul>
 
-                <li id="sostep1"><a href = "#">Сортировка &blacktriangledown;</a>
+                <li id="sostep1"><a href = "#">Поиск  &blacktriangledown;</a>
+                    <ul>
+                        <li><a href="#steps4">линейный</a></li>
+                        <li><a href="#steps5">банарный</a></li>
+                        <li><a href="#steps6">прыжковый</a></li>
+                    </ul>
+                </li>
+                <li id="sostep2"><a href = "#">Сортировка &blacktriangledown;</a>
                     <ul>
                         <li><a href="#steps">пузырьком</a></li>
                         <li><a href="#steps2">выбором</a></li>
                         <li><a href="#steps3">вставками</a></li>
                     </ul>
                 </li>
-                <li id="sostep2"><a href = "#">Поиск &blacktriangledown;</a>
-                    <ul>
-                        <li><a href="#">бинарный</a></li>
-                        <li><a href="#">не бинанрный</a></li>
-                        <li><a href="#">еще какой-то</a></li>
-                    </ul>
-                </li>
-                <li id="sostep3"><a href = "#">Алгоритмы ... &blacktriangledown;</a>
-                    <ul>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                    </ul>
-                </li>
+
 
             </ul>
   
     </nav>
     </header>
     <main>
+        <section>
+            <h2>Описание</h2>
+            <p>Линейный поиск — простой алгоритм поиска, который перебирает каждый элемент массива по очереди. Он подходит для небольших массивов или ситуаций, когда данные не отсортированы</p>
+
+        </section>
+        <section>
+            <h2>Принцип работы</h2>
+            <ol id="steps4">
+                <li>Перебор элементов: Каждый элемент массива перебирается по очереди.</li>
+                <li>Сравнение: Каждый элемент сравнивается с искомым значением.</li>
+                <li>Возвращение индекса: Если элемент найден, возвращается его индекс. Если не найден, возвращается специальное значение (например, -1).</li>
+            </ol>
+
+
+        </head>
+        <body>
+            <button class = "btn" data-name = "load-image-btn4" data-div = "image-container4" data-text="step-algo">показать блок-схему</button>
+            <div id="image-container4"></div>
+            <div id="step-algo"></div>
+
+
+            
+            
+            <div id="codeDisplay3" style="margin-top: 20px;"></div>
+        </section>
+        <section>
+            <h2>Пример кода на Python</h2>
+            <pre><code>
+    def linear_search(arr, target):
+        for i in range(len(arr)):
+            if arr[i] == target:
+                return i
+        return -1
+            
+    # Пример использования
+    arr = [10, 20, 30, 40, 50]
+    target = 30
+    index = linear_search(arr, target)
+    print(f'Элемент найден на индексе: {index}')
+                    
+            </code></pre>
+        
+        
+        </section>
+
+        <section>
+            <h2>Описание</h2>
+            <p>Бинарный поиск — эффективный алгоритм поиска, который работает только с отсортированными массивами. Он делит массив пополам на каждом шаге, что делает его очень быстрым для больших данных.</p>
+
+        </section>
+        <section>
+            <h2>Принцип работы</h2>
+            <ol id="steps5">
+                <li>Отсортированный массив: Бинарный поиск работает только с отсортированным массивом данных.</li>
+                <li>Деление пополам: Массив делится пополам, и определяется средний элемент.</li>
+                <li>Сравнение: Средний элемент сравнивается с искомым значением.</li>
+                <li>Повторение: Если искомое значение больше среднего, поиск продолжается в правой половине. Если меньше, то в левой. Процесс повторяется до тех пор, пока не будет найден искомый элемент или не останется один элемент.</li>
+                
+            </ol>
+
+
+        </head>
+        <body>
+            <button class = "btn" data-name = "load-image-btn5" data-div = "image-container5">показать блок-схему</button>
+            <div id="image-container5"></div>
+
+            
+            
+            <div id="codeDisplay3" style="margin-top: 20px;"></div>
+        </section>
+        <section>
+            <h2>Пример кода на Python</h2>
+            <pre><code>
+                
+    def binary_search(arr, target):
+        left, right = 0, len(arr) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if arr[mid] == target:
+                return mid
+            elif arr[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+        return -1
+            
+    # Пример использования
+    arr = [10, 20, 30, 40, 50]
+    target = 40
+    index = binary_search(arr, target)
+    print(f'Элемент найден на индексе: {index}')
+                    
+            </code></pre>
+        
+        
+        </section>
+
+        <section>
+            <h2>Описание</h2>
+            <p>Прыжковый поиск — компромисс между линейным и бинарным поиском. Он работает с отсортированными массивами и использует прыжки для ускорения поиска. Подходит для ситуаций, когда бинарный поиск не подходит.</p>
+
+        </section>
+        <section>
+            <h2>Принцип работы</h2>
+            <ol id="steps6">
+                <li>Определение шага прыжка: Шаг прыжка определяется как квадратный корень из длины массива.</li>
+                <li>Прыжки: Поиск происходит с помощью прыжков на шаг вперед, пока не будет найден блок, в котором может находиться искомый элемент.</li>
+                <li>Линейный поиск в блоке: В найденном блоке выполняется линейный поиск.</li>
+            </ol>
+
+
+        </head>
+        <body>
+            <button class = "btn" data-name = "load-image-btn6" data-div = "image-container6">показать блок-схему</button>
+            <div id="image-container6"></div>
+
+            
+            
+            <div id="codeDisplay3" style="margin-top: 20px;"></div>
+        </section>
+        <section>
+            <h2>Пример кода на Python</h2>
+            <pre><code>
+    import math
+
+    def jump_search(arr, target):
+        n = len(arr)
+        step = int(math.sqrt(n))
+                    
+        prev = 0
+        while arr[min(step, n)-1] < target:
+            prev = step
+            step += int(math.sqrt(n))
+            if prev >= n:
+                return -1
+                    
+        while arr[prev] < target:
+            prev += 1
+            if prev == min(step, n):
+                return -1
+                    
+        if arr[prev] == target:
+            return prev
+                    
+        return -1
+                
+    # Пример использования
+    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    target = 5
+    index = jump_search(arr, target)
+    print(f'Элемент найден на индексе: {index}')
+            </code></pre>
+        
+        
+        </section>
+
         <section>
             <h2>Описание</h2>
             <p>Алгоритм последовательно сравнивает соседние элементы списка и меняет их местами, если они находятся в неправильном порядке. Процесс повторяется до тех пор, пока список не станет отсортированным.</p>
@@ -59,7 +212,7 @@
 
         </head>
         <body>
-            <button id="load-image-btn">показать блок-схему</button>
+            <button class = "btn" data-name = "load-image-btn" data-div = "image-container">показать блок-схему</button>
             <div id="image-container"></div>
 
             
@@ -80,7 +233,10 @@
                     swapped = True
             if not swapped:
                 break
-        return nums
+    
+    random_list = [12, 8, 3, 20, 11]
+    bubble_sort(random_list)
+    print(random_list)
                     
             </code></pre>
 
@@ -101,7 +257,7 @@
 
         </head>
         <body>
-            <button id="load-image-btn2">показать блок-схему</button>
+            <button class = "btn" data-name = "load-image-btn2" data-div = "image-container2">показать блок-схему</button>
             <div id="image-container2"></div>
 
             
@@ -150,7 +306,7 @@
 
         </head>
         <body>
-            <button id="load-image-btn3">показать блок-схему</button>
+            <button class = "btn" data-name = "load-image-btn3" data-div = "image-container3">показать блок-схему</button>
             <div id="image-container3"></div>
 
             
@@ -180,23 +336,12 @@
         
         </section>
 
+
+
     </main>
-    <input type="number" id="num1" placeholder="Введите число 1">
-
-    <select id="operator">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-
-    </select>
-    <input type="number" id="num2" placeholder="Введите число 2">
-    <button onclick="calculate()">Посчитать</button> 
-    <p id="result"></p>
-
 
     <footer>
-        <p>&copy; 2023 Алгоритмы. Все права защищены.</p>
+        <p>&copy; 2052 Алгоритмы. Все права защищены.</p>
     </footer>
 
 
