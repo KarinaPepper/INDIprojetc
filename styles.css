@@ -8,12 +8,10 @@ body {
 }
 
 
-
-
 header {
     background: #35424a;
     color: #ffffff;
-    top: 0;
+    top: 0; 
     right: 0;
     left: 0;
     display: flex;
@@ -22,6 +20,14 @@ header {
     padding: 0 8%;
     box-shadow: 0 5px 10px black;
 
+
+}
+
+a {
+    color:#ffffff;
+    text-decoration: none;
+    padding: 0 4%;
+    font-size: 33px;
 }
 
 
@@ -33,17 +39,21 @@ header .DropDown{
     text-decoration: none;
 }
 
-header .DropDown:hover{
-    transform: scale(1.2);
+
+
+header ul{
+    list-style-type: none;
 }
 
-
-
+header nav ul li ul{
+    list-style-type: none;
+}
 
 header nav ul li{
     position: relative;
     float: left;
     text-decoration: none;
+    
 }
 
 header nav ul li a {
@@ -66,7 +76,6 @@ nav ul li ul {
     background:#35424a;
     display: none;
     z-index: 1;
-    
 }
 nav ul li ul li{
     width: 100%;
@@ -87,11 +96,37 @@ html {
 }
 
 #image-container {
-    text-align: center;
+    text-align:left;
     margin-top: 20px;
 }
+
+#image-container2 {
+    text-align:left;
+    margin-top: 20px;
+}
+
+#image-container3 {
+    text-align:left;
+    margin-top: 20px;
+}
+
+#image-container4 {
+    text-align:left;
+    margin-top: 20px;
+}
+
+#image-container5 {
+    text-align:left;
+    margin-top: 20px;
+}
+
+#image-container6 {
+    text-align:left;
+    margin-top: 20px;
+}
+
 img {
-    max-width: 20%;
+    max-width: 50%;
     height: auto;
 }
 
