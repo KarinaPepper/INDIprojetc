@@ -14,7 +14,7 @@
             { "url": '/INDIprojetc/image search45.png'},
             { "url": '/INDIprojetc/image search43.png'},
             { "url": '/INDIprojetc/image search44.png'},
-            { "url": "/INDIprojetc/original4lastpng.png"}
+            { "url": "/INDIprojetc/original4last.png"}
           ],
           "load-image-btn5": [
             { "url": "/bird3.jpeg"}
