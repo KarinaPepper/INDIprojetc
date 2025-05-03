@@ -17,27 +17,19 @@
             { "url": "/INDIprojetc/original4last.png"}
           ],
           "load-image-btn5": [
-            { "url": "/bird3.jpeg"}
+            { "url": "/INDIprojetc/image5.png"}
           ],
           "load-image-btn6": [
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird4.jpeg"},
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird5.jpeg"}
+            { "url": "/INDIprojetc/image6.png"}
           ],
           "load-image-btn": [
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird4.jpeg"},
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird5.jpeg"}
+            { "url": "/INDIprojetc/image1.png"}
           ],
           "load-image-btn2": [
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird4.jpeg"},
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird5.jpeg"}
+            { "url": "/INDIprojetc/image2.png"}
           ],
           "load-image-btn3": [
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird3.jpeg"},
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird4.jpeg"},
-            { "url": "/Users/ilia_dumov/Desktop/ballsbird/bird5.jpeg"}
+            { "url": "/INDIprojetc/image3.png"}
           ]
 
         };
